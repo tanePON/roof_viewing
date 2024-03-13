@@ -1,16 +1,34 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>360&deg; innovation-left-lower</title>
-    <meta name="description" content="360&deg; Image - A-Frame">
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <a-sky src="../../../src/assets/innovation-left-lower.jpg" rotation="0 -130 0"></a-sky>
 
-      <a-text font="kelsonsans" value="ラボ滝沢" width="6" position="-2.5 0.25 -1.5"
-              rotation="0 15 0"></a-text>
-    </a-scene>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>360&deg; innovation-left-lower</title>
+  <meta name="description" content="360&deg; Image - A-Frame">
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene inspector="" keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="">
+
+    <a-asset>
+      <img id="mappin" crossOrigin="anonymous" src="../../../src/assets/map_pin.png">
+    </a-asset>
+
+    <a-sky src="../../../src/assets/innovation-left-lower.jpg" rotation="0 -29.999999999999996 0" material=""
+      geometry=""></a-sky>
+
+    <a-text font="kelsonsans" value="Puy de Sancy, France" width="6" position="-2.07003 0.78388 -1.5" rotation="0 15 0"
+      text="value: innovation-left-lower"></a-text>
+    <div class="a-loader-title" style="display: none;">360° innovation-left-lower</div>
+
+    <a-image src="../../../src/assets/yurusu_houyouryoku.png" width="7" height="3.5" scale="" material=""
+      geometry="width: 5" position="4.70459 -0.08797 -7.46575" rotation="0 -33.76440286705942 0"></a-image>
+
+    <a-link href="../innpvation-right-upper/" position="-3.5 1.5 -1.0" image="#mappin"></a-link>
+
+
+  </a-scene>
+
+</body>
+
 </html>
