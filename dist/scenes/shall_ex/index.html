@@ -38,49 +38,22 @@
 
 
         <!-- rayを制御してる？ -->
-        <a-entity id="camera" camera="userHeight: 1.6" rotation="0 100 0" look-controls
-            cursor="rayOrigin: mouse"></a-entity>
+        <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
 
         <!-- 背景 -->
-        <a-sky src="../../../src/assets/shall_2109.jpg" rotation="0 274 0"></a-sky>
+        <a-sky src="../../../src/assets/shall_ex_2123.jpg" rotation="0 220 0"></a-sky>
 
         <!-- テキストの配置 -->
-        <a-text font="kelsonsans" value="s_hall" width="6" position="-2.5 3 -2.5" rotation="0 40 0"></a-text>
+        <a-text font="kelsonsans" value="s_hall_ex" width="6" position="-2.5 3 -2.5" rotation="0 40 0"></a-text>
 
-        <!--レイアウト例あり-->
-        <a-text class="link" navigate-on-click="url: ../shall_ex" geometry="primitive: plane; height:1; width:1"
-            materifont="kelsonsans" value="s_hall_ex" width="6" position="-2.5 2 -2.5" rotation="0 40 0"></a-text>
+        <!--レイアウト例なし-->
+        <a-text class="link" navigate-on-click="url: ../shall"
+        geometry="primitive: plane; height:1; width:1" materifont="kelsonsans" value="s_hall" width="6" position="-2.5 2 -2.5" rotation="0 40 0"></a-text>
 
-        <!-- primitive: torusをリンクとして配置 -->
-
-        <a-entity class="link" navigate-on-click="url: ../shall_2" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="0 -10 -45" rotation="90 0 0"
-            scale="0.5 0.5 0.5"></a-entity>
-        <a-entity class="link" navigate-on-click="url: ../shall_2" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="0 -10 -22" rotation="90 0 0"
-            scale="0.5 0.5 0.5"></a-entity>
-        <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="-30 -10 0" rotation="90 0 0"
-            scale="0.5 0.5 0.5"></a-entity>
-        <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="-30 -10 -22" rotation="90 0 0"
-            scale="0.5 0.5 0.5"></a-entity>
-        <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="-30 -10 -45" rotation="90 0 0"
-            scale="0.5 0.5 0.5"></a-entity>
-        <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="-55 -10 0" rotation="90 0 0"
-            scale="0.5 0.5 0.5"></a-entity>
-            <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="-55 -10 -22" rotation="90 0 0"
-            scale="0.5 0.5 0.5"></a-entity>
-        <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="-55 -10 -45" rotation="90 0 0"
-            scale="0.5 0.5 0.5"></a-entity>
-
-
-
-        <!--
+        <!-- リンクを画像として配置 -->
+        <a-entity class="link" navigate-on-click="url: ../shall_2"
+            geometry="primitive: plane; height:1; width:1" material="shader: standard; src: #mappin; transparent: true"
+            position="10 0 -7"></a-entity>
         <a-entity class="link" navigate-on-click="url: ../innovation-left-upper"
             geometry="primitive: plane; height:1; width:1" material="shader: standard; src: #mappin; transparent: true"
             position="-4 0 -7" rotation="0 45 0"></a-entity>
@@ -96,7 +69,6 @@
         <a-entity class="link" navigate-on-click="url: ../innovation-right-upper"
             geometry="primitive: plane; height:1; width:1" material="shader: standard; src: #mappin; transparent: true"
             position="1 0 -20"></a-entity>
-            -->
 </body>
 
 </html>

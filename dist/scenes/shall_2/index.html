@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <!--
+      イベントの設定方法:https://stackoverflow.com/questions/49018866/need-help-creating-links-to-other-web-pages-in-aframe    -->
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script>
+        AFRAME.registerComponent('navigate-on-click', {
+            schema: {
+                url: { default: '' }
+            },
+
+            init: function () {
+                var data = this.data;
+                var el = this.el;
+
+                el.addEventListener('click', function () {
+                    window.location.href = data.url;
+                });
+            }
+        });        
+    </script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+            <!-- Images. -->
+            <img id="houyouryoku" src="../../../src/assets/yurusu_houyouryoku.png">
+            <img id="mappin" src="../../../src/assets/map_pin.png">
+        </a-assets>
+
+
+        <!-- rayを制御してる？ -->
+        <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+
+        <!-- 背景 -->
+        <a-sky src="../../../src/assets/shall_2111.jpg" rotation="0 140 0"></a-sky>
+
+        <!-- テキストの配置 -->
+        <a-text font="kelsonsans" value="s_hall_2" width="6" position="-2.5 3 -2.5" rotation="0 40 0"></a-text>
+        <!--レイアウト例なし-->
+        <a-text class="link" navigate-on-click="url: ../shall_ex_2"
+        geometry="primitive: plane; height:1; width:1" materifont="kelsonsans" value="shall_ex_2" width="6" position="-2.5 2 -2.5" rotation="0 40 0"></a-text>
+
+        <!-- リンクを画像として配置 -->
+        <a-entity class="link" navigate-on-click="url: ../shall"
+            geometry="primitive: plane; height:1; width:1" material="shader: standard; src: #mappin; transparent: true"
+            position="-13 0 -9" rotation="0 30 0"></a-entity>
+            
+       
+</body>
+
+</html>
