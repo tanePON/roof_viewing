@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>360&deg; Image Gallery</title>
+    <title>360&deg; 小ホール</title>
     <meta name="description" content="360&deg; Image Gallery - A-Frame">
 
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
@@ -37,9 +37,10 @@
         </a-assets>
 
 
-        <!-- rayを制御してる？ -->
-        <a-entity id="camera" camera="userHeight: 1.6" rotation="0 100 0" look-controls
-            cursor="rayOrigin: mouse"></a-entity>
+        <!-- rigでカメラのrotation look-controls cursorでmouseでreyを飛ばしてるらしい -->
+        <a-entity id="rig" rotation="0 40 0">
+            <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+        </a-entity>
 
         <!-- 背景 -->
         <a-sky src="../../../src/assets/shall_2109.jpg" rotation="0 274 0"></a-sky>
@@ -52,7 +53,6 @@
             materifont="kelsonsans" value="s_hall_ex" width="6" position="-2.5 2 -2.5" rotation="0 40 0"></a-text>
 
         <!-- primitive: torusをリンクとして配置 -->
-
         <a-entity class="link" navigate-on-click="url: ../shall_2" geometry="primitive: torus"
             material="shader: standard; transparent: true" position="0 -10 -45" rotation="90 0 0"
             scale="0.5 0.5 0.5"></a-entity>
@@ -71,32 +71,12 @@
         <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
             material="shader: standard; transparent: true" position="-55 -10 0" rotation="90 0 0"
             scale="0.5 0.5 0.5"></a-entity>
-            <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
+        <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
             material="shader: standard; transparent: true" position="-55 -10 -22" rotation="90 0 0"
             scale="0.5 0.5 0.5"></a-entity>
         <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
             material="shader: standard; transparent: true" position="-55 -10 -45" rotation="90 0 0"
             scale="0.5 0.5 0.5"></a-entity>
-
-
-
-        <!--
-        <a-entity class="link" navigate-on-click="url: ../innovation-left-upper"
-            geometry="primitive: plane; height:1; width:1" material="shader: standard; src: #mappin; transparent: true"
-            position="-4 0 -7" rotation="0 45 0"></a-entity>
-        <a-entity class="link" navigate-on-click="url: ../innovation-left-upper"
-            geometry="primitive: plane; height:1; width:1" material="shader: standard; src: #mappin; transparent: true"
-            position="2 0 -10" rotation="0 0 0"></a-entity>
-        <a-entity class="link" navigate-on-click="url: ../innovation-left-upper"
-            geometry="primitive: plane; height:1; width:1" material="shader: standard; src: #mappin; transparent: true"
-            position="5 0 -14" rotation="0 0 0"></a-entity>
-        <a-entity class="link" navigate-on-click="url: ../innovation-left-upper"
-            geometry="primitive: plane; height:1; width:1" material="shader: standard; src: #mappin; transparent: true"
-            position="-10 0 -14" rotation="0 45 0"></a-entity>
-        <a-entity class="link" navigate-on-click="url: ../innovation-right-upper"
-            geometry="primitive: plane; height:1; width:1" material="shader: standard; src: #mappin; transparent: true"
-            position="1 0 -20"></a-entity>
-            -->
 </body>
 
 </html>
