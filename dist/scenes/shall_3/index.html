@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>360&deg; 小ホール_2</title>
+    <title>360&deg; 小ホール_3</title>
     <meta name="description" content="360&deg; Image Gallery - A-Frame">
 
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
@@ -38,36 +38,36 @@
 
 
         <!-- rigでカメラのrotation look-controls cursorでmouseでreyを飛ばしてるらしい -->
-        <a-entity id="rig" rotation="0 180 0">
+        <a-entity id="rig" rotation="0 240 0">
             <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
         </a-entity>
 
         <!-- 背景 -->
-        <a-sky src="../../../src/assets/shall_2110.jpg" rotation="0 0 0"></a-sky>
+        <a-sky src="../../../src/assets/shall_2111.jpg" rotation="0 355 0"></a-sky>
 
         <!-- テキストの配置 -->
-        <a-text font="kelsonsans" value="s_hall_2" width="6" position="-2.5 3 5" rotation="0 180 0"></a-text>
+        <a-text font="kelsonsans" value="s_hall_2" width="6" position="-2.5 3 -2.5" rotation="0 40 0"></a-text>
         <!--レイアウト例なし-->
         <a-text class="link" navigate-on-click="url: ../shall_ex_2" geometry="primitive: plane; height:1; width:1"
-            materifont="kelsonsans" value="shall_ex_2" width="6" position="-2.5 2 5" rotation="0 180 0"></a-text>
+            materifont="kelsonsans" value="shall_ex_2" width="6" position="-2.5 2 -2.5" rotation="0 40 0"></a-text>
 
         <!-- primitive: torusをリンクとして配置 -->
         <a-entity class="link" navigate-on-click="url: ../shall_2" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="-55 -10 60" rotation="90 0 0"></a-entity>
+            material="shader: standard; transparent: true" position="0 -10 45" rotation="90 0 0"></a-entity>
         <a-entity class="link" navigate-on-click="url: ../shall_2" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="-55 -10 30" rotation="90 0 0"></a-entity>
+            material="shader: standard; transparent: true" position="0 -10 22" rotation="90 0 0"></a-entity>
         <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="-55 -10 0" rotation="90 0 0"></a-entity>
+            material="shader: standard; transparent: true" position="30 -10 0" rotation="90 0 0"></a-entity>
         <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="0 -10 30" rotation="90 0 0"></a-entity>
+            material="shader: standard; transparent: true" position="30 -10 22" rotation="90 0 0"></a-entity>
         <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="0 -10 60" rotation="90 0 0"></a-entity>
+            material="shader: standard; transparent: true" position="30 -10 45" rotation="90 0 0"></a-entity>
         <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="45 -10 0" rotation="90 0 0"></a-entity>
+            material="shader: standard; transparent: true" position="55 -10 0" rotation="90 0 0"></a-entity>
         <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="45 -10 30" rotation="90 0 0"></a-entity>
+            material="shader: standard; transparent: true" position="55 -10 22" rotation="90 0 0"></a-entity>
         <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="45 -10 60" rotation="90 0 0"></a-entity>
+            material="shader: standard; transparent: true" position="55 -10 45" rotation="90 0 0"></a-entity>
 
 
 </body>
