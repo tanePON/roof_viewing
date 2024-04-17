@@ -1,16 +1,79 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>360&deg; innovation</title>
-    <meta name="description" content="360&deg; Image - A-Frame">
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <a-sky src="../../../src/assets/shall_2113.jpg" rotation="0 -130 0"></a-sky>
 
-      <a-text font="kelsonsans" value="ラボ滝沢" width="6" position="-2.5 0.25 -1.5"
-              rotation="0 15 0"></a-text>
-    </a-scene>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>360&deg; 小ホール_5</title>
+  <meta name="description" content="360&deg; Image Gallery - A-Frame">
+
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <!--
+      イベントの設定方法:https://stackoverflow.com/questions/49018866/need-help-creating-links-to-other-web-pages-in-aframe    -->
+  <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+  <script>
+    AFRAME.registerComponent('navigate-on-click', {
+      schema: {
+        url: { default: '' }
+      },
+
+      init: function () {
+        var data = this.data;
+        var el = this.el;
+
+        el.addEventListener('click', function () {
+          window.location.href = data.url;
+        });
+      }
+    });        
+  </script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+      <!-- Images. -->
+      <img id="houyouryoku" src="../../../src/assets/yurusu_houyouryoku.png">
+      <img id="mappin" src="../../../src/assets/map_pin.png">
+      <img id="exitpin" src="../../../src/assets/hijyouguchi_mark.png">
+      <img id="checkpin" src="../../../src/assets/magnifier_mushimegane_check.png">
+    </a-assets>
+
+    <a-sky src="../../../src/assets/shall_2113.jpg" rotation="0 275 0"></a-sky>
+
+    <!-- rigでカメラのrotation look-controls cursorでmouseでreyを飛ばしてるらしい -->
+    <a-entity id="rig" rotation="0 0 0">
+      <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+    </a-entity>
+
+    <!-- テキストの配置 -->
+    <a-text font="kelsonsans" value="s_hall" width="6" position="-2.5 3 -2.5" rotation="0 40 0"></a-text>
+
+    <!--レイアウト例あり-->
+    <a-text class="link" navigate-on-click="url: ../shall_ex" geometry="primitive: plane; height:1; width:1"
+      materifont="kelsonsans" value="s_hall_ex" width="6" position="-2.5 2 -2.5" rotation="0 40 0"></a-text>
+
+   <!-- 場所移動できるprimitive: torus -->
+   <a-entity class="link" navigate-on-click="url: ../shall" geometry="primitive: torus"
+   material="shader: standard; transparent: true" position="25 -10 22" rotation="90 0 0"></a-entity>
+<a-entity class="link" navigate-on-click="url: ../shall_2" geometry="primitive: torus"
+   material="shader: standard; transparent: true" position="25 -10 0" rotation="90 0 0"></a-entity>
+<a-entity class="link" navigate-on-click="url: ../shall_3" geometry="primitive: torus"
+   material="shader: standard; transparent: true" position="25 -10 -22" rotation="90 0 0"></a-entity>
+<a-entity class="link" navigate-on-click="url: ../shall_4" geometry="primitive: torus"
+   material="shader: standard; transparent: true" position="0 -10 22" rotation="90 0 0"></a-entity>
+<a-entity class="link" navigate-on-click="url: ../shall_6" geometry="primitive: torus"
+   material="shader: standard; transparent: true" position="0 -10 -22" rotation="90 0 0"></a-entity>
+<a-entity class="link" navigate-on-click="url: ../shall_7" geometry="primitive: torus"
+   material="shader: standard; transparent: true" position="-25 -10 22" rotation="90 0 0"></a-entity>
+<a-entity class="link" navigate-on-click="url: ../shall_8" geometry="primitive: torus"
+   material="shader: standard; transparent: true" position="-25 -10 0" rotation="90 0 0"></a-entity>
+<a-entity class="link" navigate-on-click="url: ../shall_9" geometry="primitive: torus"
+   material="shader: standard; transparent: true" position="-25 -10 -22" rotation="90 0 0"></a-entity>
+
+    <!--その他-->
+
+  </a-scene>
+  
+</body>
+
 </html>

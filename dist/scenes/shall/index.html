@@ -34,9 +34,10 @@
             <!-- Images. -->
             <img id="houyouryoku" src="../../../src/assets/yurusu_houyouryoku.png">
             <img id="mappin" src="../../../src/assets/map_pin.png">
+            <img id="exitpin" src="../../../src/assets/hijyouguchi_mark.png">
+            <img id="checkpin" src="../../../src/assets/magnifier_mushimegane_check.png">
         </a-assets>
-
-
+        
         <!-- rigでカメラのrotation look-controls cursorでmouseでreyを飛ばしてるらしい -->
         <a-entity id="rig" rotation="0 40 0">
             <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
@@ -52,7 +53,7 @@
         <a-text class="link" navigate-on-click="url: ../shall_ex" geometry="primitive: plane; height:1; width:1"
             materifont="kelsonsans" value="s_hall_ex" width="6" position="-2.5 2 -2.5" rotation="0 40 0"></a-text>
 
-        <!-- primitive: torusをリンクとして配置 -->
+        <!-- 場所移動できるprimitive: torus -->
         <a-entity class="link" navigate-on-click="url: ../shall_2" geometry="primitive: torus"
             material="shader: standard; transparent: true" position="0 -10 -22" rotation="90 0 0"></a-entity>
         <a-entity class="link" navigate-on-click="url: ../shall_3" geometry="primitive: torus"
@@ -69,6 +70,11 @@
             material="shader: standard; transparent: true" position="-55 -10 -22" rotation="90 0 0"></a-entity>
         <a-entity class="link" navigate-on-click="url: ../shall_9" geometry="primitive: torus"
             material="shader: standard; transparent: true" position="-55 -10 -45" rotation="90 0 0"></a-entity>
+
+        <!--その他info-->
+        <a-entity class="exit" 
+        geometry="primitive: plane; height:1; width:1" material="shader: standard; src: #exitpin; transparent: true"
+        position="-55 10 -50" rotation="0 45 0" scale="5 5 5"></a-entity>
 </body>
 
 </html>
