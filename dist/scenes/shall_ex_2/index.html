@@ -38,39 +38,36 @@
 
 
         <!-- rigでカメラのrotation look-controls cursorでmouseでreyを飛ばしてるらしい -->
-        <a-entity id="rig" rotation="0 180 0">
-            <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+        <a-entity id="rig" rotation="0 185 0">
+            <a-entity id="camera" camera="userHeight: 100" look-controls cursor="rayOrigin: mouse"></a-entity>
         </a-entity>
 
         <!-- 背景 -->
-        <a-sky src="../../../src/assets/shall_ex_2124.jpg" rotation="0 0 0"></a-sky>
+        <a-sky src="../../../src/assets/shall_ex_2124.jpg" rotation="0 5 0"></a-sky>
 
-        <!--レイアウト例なし-->
-        <a-text class="link" navigate-on-click="url: ../shall_2" geometry="primitive: plane; height:1; width:1"
-            materifont="kelsonsans" value="shall_2" width="6" position="-2.5 3 5" rotation="0 180 0"></a-text>
+        <!-- テキストの配置 -->
+        <a-text font="kelsonsans" value="s_hall_2" width="6" position="-2.5 3 5" rotation="0 180 0"></a-text>
         <!--レイアウト例なし-->
         <a-text class="link" navigate-on-click="url: ../shall_ex_2" geometry="primitive: plane; height:1; width:1"
             materifont="kelsonsans" value="shall_ex_2" width="6" position="-2.5 2 5" rotation="0 180 0"></a-text>
 
         <!-- primitive: torusをリンクとして配置 -->
-        <a-entity class="link" navigate-on-click="url: ../shall_2" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="-55 -10 60" rotation="90 0 0"></a-entity>
-        <a-entity class="link" navigate-on-click="url: ../shall_2" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="-55 -10 30" rotation="90 0 0"></a-entity>
-        <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="-55 -10 0" rotation="90 0 0"></a-entity>
-        <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="0 -10 30" rotation="90 0 0"></a-entity>
-        <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="0 -10 60" rotation="90 0 0"></a-entity>
-        <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
+        <a-entity class="link1" navigate-on-click="url: ../shall" geometry="primitive: torus"
             material="shader: standard; transparent: true" position="45 -10 0" rotation="90 0 0"></a-entity>
-        <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="45 -10 30" rotation="90 0 0"></a-entity>
-        <a-entity class="link" navigate-on-click="" geometry="primitive: torus"
-            material="shader: standard; transparent: true" position="45 -10 60" rotation="90 0 0"></a-entity>
-
-
+        <a-entity class="link3" navigate-on-click="url: ../shall_3" geometry="primitive: torus"
+            material="shader: standard; transparent: true" position="-55 -10 0" rotation="90 0 0"></a-entity>
+        <a-entity class="link4" navigate-on-click="url: ../shall_4" geometry="primitive: torus"
+            material="shader: standard; transparent: true" position="45 -5 45" rotation="90 0 0"></a-entity>
+        <a-entity class="link5" navigate-on-click="url: ../shall_5" geometry="primitive: torus"
+            material="shader: standard; transparent: true" position="0 -5 45" rotation="90 0 0"></a-entity>
+        <a-entity class="link6" navigate-on-click="url: ../shall_6" geometry="primitive: torus"
+            material="shader: standard; transparent: true" position="-55 -5 45" rotation="90 0 0"></a-entity>
+        <a-entity class="link7" navigate-on-click="url: ../shall_7" geometry="primitive: torus"
+            material="shader: standard; transparent: true" position="45 0 75" rotation="90 0 0"></a-entity>
+        <a-entity class="link8" navigate-on-click="url: ../shall_8" geometry="primitive: torus"
+            material="shader: standard; transparent: true" position="0 0 75" rotation="90 0 0"></a-entity>
+        <a-entity class="link9" navigate-on-click="url: ../shall_9" geometry="primitive: torus"
+            material="shader: standard; transparent: true" position="-55 0 75" rotation="90 0 0"></a-entity>
 </body>
 
 </html>
