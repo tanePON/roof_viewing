@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>360&deg; 小ホール_ex_v2</title>
+    <title>360&deg; 小ホール_ex_2_v2</title>
     <meta name="description" content="360&deg; Image Gallery - A-Frame">
 
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
@@ -45,26 +45,34 @@
         </a-entity>
 
         <!-- 背景 -->
-        <a-sky src="../../../src/assets/shall_ex_2123.jpg" rotation="0 230 0"></a-sky>
+        <a-sky src="../../../src/assets/shall_ex_2124.jpg" rotation="0 185 0"></a-sky>
 
         <!-- info -->
         <a-entity id="info" position="0 1 -2.5">
-            <a-text font="kelsonsans" value="s_hall_ex_v2"></a-text>
-            <a-text class="ex_link" navigate-on-click="url: ../shall_v2" materifont="kelsonsans" value="shall_v2"
+            <a-text font="kelsonsans" value="s_hall_ex_2_v2"></a-text>
+            <a-text class="ex_link" navigate-on-click="url: ../shall_2_v2" materifont="kelsonsans" value="shall_v2"
                 position="0 0.3 0"></a-text>
         </a-entity>
 
         <!--場所移動できるlink-->
-        <a-entity class="link_milldeLeft" navigate-on-click="url: ../shall_ex_4_v2" geometry="primitive: plane; height:3; width:3"
+        <a-entity class="link_left" navigate-on-click="url: ../shall_ex_v2" geometry="primitive: plane; height:3; width:3"
+            material="shader: standard; src: #arrowBlue; transparent: true" position="-5 -5 0"
+            rotation="270 0 0"></a-entity>
+        <a-entity class="link_middleLeft" navigate-on-click="url: ../shall_ex_4"
+            geometry="primitive: plane; height:3; width:3"
             material="shader: standard; src: #arrowBlue; transparent: true" position="-5 -5 -5"
             rotation="270 315 0"></a-entity>
-        <a-entity class="link_center" navigate-on-click="url: ../shall_ex_5_v2" geometry="primitive: plane; height:3; width:3"
+        <a-entity class="link_center" navigate-on-click="url: ../shall_ex_5" geometry="primitive: plane; height:3; width:3"
             material="shader: standard; src: #arrowBlue; transparent: true" position="0 -5 -10"
             rotation="270 270 0"></a-entity>
-        <a-entity class="link_middleRight" navigate-on-click="url: ../shall_ex_2_v2" geometry="primitive: plane; height:3; width:3"
+        <a-entity class="link_middleRight" navigate-on-click="url: ../shall_ex_6"
+            geometry="primitive: plane; height:3; width:3"
             material="shader: standard; src: #arrowBlue; transparent: true" position="5 -5 -5"
             rotation="270 225 0"></a-entity>
-            
+        <a-entity class="link_right" navigate-on-click="url: ../shall_ex_3" geometry="primitive: plane; height:3; width:3"
+            material="shader: standard; src: #arrowBlue; transparent: true" position="5 -5 0"
+            rotation="270 180 0"></a-entity>
+
         <!--その他-->
 
 </body>
