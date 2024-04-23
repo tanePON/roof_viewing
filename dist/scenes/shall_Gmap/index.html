@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>360&deg; 小ホール_Gmap</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <!--
+      イベントの設定方法:https://stackoverflow.com/questions/49018866/need-help-creating-links-to-other-web-pages-in-aframe    -->
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script>
+        AFRAME.registerComponent('navigate-on-click', {
+            schema: {
+                url: { default: '' }
+            },
+
+            init: function () {
+                var data = this.data;
+                var el = this.el;
+
+                el.addEventListener('click', function () {
+                    window.location.href = data.url;
+                });
+            }
+        });        
+    </script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+            <!-- Images. -->
+            <img id="houyouryoku" src="../../../src/assets/yurusu_houyouryoku.png">
+            <img id="mappin" src="../../../src/assets/map_pin.png">
+            <img id="exitpin" src="../../../src/assets/hijyouguchi_mark.png">
+            <img id="checkpin" src="../../../src/assets/magnifier_mushimegane_check.png">
+            <img id="arrowBlue" src="../../../src/assets/arrow_blue.png">
+        </a-assets>
+
+        <!-- rigでカメラのrotation look-controls cursorでmouseでreyを飛ばしてるらしい -->
+        <a-entity id="rig" rotation="0 0 0">
+            <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+        </a-entity>
+
+        <!-- 背景 -->
+        <a-sky src="../../../src/assets/shall_2109.jpg" rotation="0 230 0"></a-sky>
+
+        <!-- info -->
+        <a-entity id="info" position="0 1 -2.5">
+            <a-text font="kelsonsans" value="s_hall_Gmap"></a-text>
+            <a-text class="ex_link" navigate-on-click="url: ../shall_Gmap_ex" materifont="kelsonsans" value="s_hall_Gmap_ex"
+                position="0 0.3 0"></a-text>
+        </a-entity>
+
+        <!--場所移動できるlink-->
+        <a-entity class="link_milldeLeft" navigate-on-click="url: ../shall_4" geometry="primitive: plane; height:3; width:3"
+            material="shader: standard; src: #arrowBlue; transparent: true" position="-5 -5 -5"
+            rotation="270 315 0"></a-entity>
+        <a-entity class="link_center" navigate-on-click="url: ../shall_5" geometry="primitive: plane; height:3; width:3"
+            material="shader: standard; src: #arrowBlue; transparent: true" position="0 -5 -10"
+            rotation="270 270 0"></a-entity>
+        <a-entity class="link_middleRight" navigate-on-click="url: ../shall_v2_2" geometry="primitive: plane; height:3; width:3"
+            material="shader: standard; src: #arrowBlue; transparent: true" position="5 -5 -5"
+            rotation="270 225 0"></a-entity>
+            
+        <!--その他-->
+
+</body>
+
+</html>
