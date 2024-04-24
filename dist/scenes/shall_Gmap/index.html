@@ -30,13 +30,13 @@
 <body>
     <a-scene>
         <a-assets>
-            <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-            <!-- Images. -->
-            <img id="houyouryoku" src="../../../src/assets/yurusu_houyouryoku.png">
-            <img id="mappin" src="../../../src/assets/map_pin.png">
-            <img id="exitpin" src="../../../src/assets/hijyouguchi_mark.png">
-            <img id="checkpin" src="../../../src/assets/magnifier_mushimegane_check.png">
-            <img id="arrowBlue" src="../../../src/assets/arrow_blue.png">
+            <img id="left-img" src="https://dummyimage.com/600x400/ffff00/ffffff.jpg&text=600x400left">
+            <img id="middleLeft-img" src="https://dummyimage.com/600x400/008000/ffffff.jpg&text=600x400middleLeft">
+            <img id="center-img" src="https://dummyimage.com/600x400/000000/ffffff.jpg&text=600x400center">
+            <img id="middleRight-img" src="https://dummyimage.com/600x400/ff0000/ffffff.jpg&text=600x400middleRight">
+            <img id="right-img" src="https://dummyimage.com/600x400/0000ff/ffffff.jpg&text=600x400center">
+
+            <a-mixin id="cube" geometry="primitive: box"></a-mixin>
         </a-assets>
 
         <!-- rigでカメラのrotation look-controls cursorでmouseでreyを飛ばしてるらしい -->
@@ -45,28 +45,36 @@
         </a-entity>
 
         <!-- 背景 -->
-        <a-sky src="../../../src/assets/shall_2109.jpg" rotation="0 230 0"></a-sky>
+        <!-- <a-sky src="../../../src/assets/shall_2109.jpg" rotation="0 230 0"></a-sky> -->
 
         <!-- info -->
-        <a-entity id="info" position="0 1 -2.5">
-            <a-text font="kelsonsans" value="s_hall_Gmap"></a-text>
-            <a-text class="ex_link" navigate-on-click="url: ../shall_Gmap_ex" materifont="kelsonsans" value="s_hall_Gmap_ex"
-                position="0 0.3 0"></a-text>
+
+
+        <!-- Gmap風UI
+        <a-entity id="cubeLink_middleLeft" mixin="cube" material="color: grey; opacity: 0.3; transparent: true"
+            position="-1 0 -1" rotation="0 45 0" scale="1 10 0.1">
         </a-entity>
+        <a-entity id="cubeLink_center" mixin="cube" material="color: grey; opacity: 0.3; transparent: true"
+            position="0 0 -1.5" rotation="0 0 0" scale="1.5 10 0.1">
+        </a-entity>
+        <a-entity id="cubeLink_middleRight" mixin="cube" material="color: grey; opacity: 0.3; transparent: true"
+            position="1 0 -1" rotation="0 -45 0" scale="1 10 0.1">
+        </a-entity> -->
 
-        <!--場所移動できるlink-->
-        <a-entity class="link_milldeLeft" navigate-on-click="url: ../shall_4" geometry="primitive: plane; height:3; width:3"
-            material="shader: standard; src: #arrowBlue; transparent: true" position="-5 -5 -5"
-            rotation="270 315 0"></a-entity>
-        <a-entity class="link_center" navigate-on-click="url: ../shall_5" geometry="primitive: plane; height:3; width:3"
-            material="shader: standard; src: #arrowBlue; transparent: true" position="0 -5 -10"
-            rotation="270 270 0"></a-entity>
-        <a-entity class="link_middleRight" navigate-on-click="url: ../shall_v2_2" geometry="primitive: plane; height:3; width:3"
-            material="shader: standard; src: #arrowBlue; transparent: true" position="5 -5 -5"
-            rotation="270 225 0"></a-entity>
-            
-        <!--その他-->
+        <!-- curved image primitive 1024*768px -3 IMG layout -->
+        <!-- Angle Subtended by Arc 円弧の角度　= 180度 -->
+        <!-- Angle Subtended by each image 各円弧の角度　= 50度 -->
+        <!-- width of Arc 円弧の幅　DIAMETER = 1m -->
+        <!-- Radius of Arc 円弧の半径　= 0.5m -->
+        <a-curvedimage id="middleRight-img" src="#middleRight-img" theta-length="50" theta-start="90" radius="0.5"
+            height="0.29" position="0 0 -0.5" scale="1 1 1" material=""
+            geometry="thetaLength: 50; thetaStart: 90"></a-curvedimage>
 
+        <a-curvedimage id="center-img" src="#center-img" radius="0.5" height="0.29" position="0 0 -0.5" scale="1 1 1"
+            material="" geometry="theta-length:50; theta-start:155"></a-curvedimage>
+
+        <a-curvedimage id="middleLeft-img" src="#middleLeft-img" radius="0.5" height="0.29" position="0 0 -0.5" scale="1 1 1"
+            material="" geometry="theta-length:50; theta-start:220"></a-curvedimage>
 </body>
 
 </html>
