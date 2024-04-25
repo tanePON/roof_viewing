@@ -35,46 +35,55 @@
             <img id="center-img" src="https://dummyimage.com/600x400/000000/ffffff.jpg&text=600x400center">
             <img id="middleRight-img" src="https://dummyimage.com/600x400/ff0000/ffffff.jpg&text=600x400middleRight">
             <img id="right-img" src="https://dummyimage.com/600x400/0000ff/ffffff.jpg&text=600x400center">
-
-            <a-mixin id="cube" geometry="primitive: box"></a-mixin>
         </a-assets>
 
         <!-- rigでカメラのrotation look-controls cursorでmouseでreyを飛ばしてるらしい -->
         <a-entity id="rig" rotation="0 0 0">
-            <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+            <a-entity id="camera" camera="userHeight: 1.6; fov:80" look-controls cursor="rayOrigin: mouse"></a-entity>
         </a-entity>
 
         <!-- 背景 -->
-        <!-- <a-sky src="../../../src/assets/shall_2109.jpg" rotation="0 230 0"></a-sky> -->
+        <a-sky src="../../../src/assets/shall_2109.jpg" rotation="0 230 0"></a-sky>
+        <!-- <a-sky id="dummySky" material="color:#c0c0c0"></a-sky> -->
+        
 
-        <!-- info -->
+        <!-- Gmap風UI -->
+        <!-- <a-curvedimage id="right-blue" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#0000ff; opacity:0.3" geometry="theta-length:36; theta-start:90"></a-curvedimage> -->
 
+        <a-curvedimage id="middleRight-red" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#ff0000; opacity:0.3" geometry="theta-length:36; theta-start:126"></a-curvedimage>
 
-        <!-- Gmap風UI
-        <a-entity id="cubeLink_middleLeft" mixin="cube" material="color: grey; opacity: 0.3; transparent: true"
-            position="-1 0 -1" rotation="0 45 0" scale="1 10 0.1">
-        </a-entity>
-        <a-entity id="cubeLink_center" mixin="cube" material="color: grey; opacity: 0.3; transparent: true"
-            position="0 0 -1.5" rotation="0 0 0" scale="1.5 10 0.1">
-        </a-entity>
-        <a-entity id="cubeLink_middleRight" mixin="cube" material="color: grey; opacity: 0.3; transparent: true"
-            position="1 0 -1" rotation="0 -45 0" scale="1 10 0.1">
-        </a-entity> -->
+        <a-curvedimage id="center-black" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#000000; opacity:0.3" geometry="theta-length:36; theta-start:162"></a-curvedimage>
 
-        <!-- curved image primitive 1024*768px -3 IMG layout -->
-        <!-- Angle Subtended by Arc 円弧の角度　= 180度 -->
-        <!-- Angle Subtended by each image 各円弧の角度　= 50度 -->
-        <!-- width of Arc 円弧の幅　DIAMETER = 1m -->
-        <!-- Radius of Arc 円弧の半径　= 0.5m -->
-        <a-curvedimage id="middleRight-img" src="#middleRight-img" theta-length="50" theta-start="90" radius="0.5"
-            height="0.29" position="0 0 -0.5" scale="1 1 1" material=""
-            geometry="thetaLength: 50; thetaStart: 90"></a-curvedimage>
+        <a-curvedimage id="middleLeft-green" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#008000; opacity:0.3" geometry="theta-length:36; theta-start:198"></a-curvedimage>
 
-        <a-curvedimage id="center-img" src="#center-img" radius="0.5" height="0.29" position="0 0 -0.5" scale="1 1 1"
-            material="" geometry="theta-length:50; theta-start:155"></a-curvedimage>
+        <!-- <a-curvedimage id="left-yellow" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#ffff00; opacity:0.3" geometry="theta-length:36; theta-start:234"></a-curvedimage>
 
-        <a-curvedimage id="middleLeft-img" src="#middleLeft-img" radius="0.5" height="0.29" position="0 0 -0.5" scale="1 1 1"
-            material="" geometry="theta-length:50; theta-start:220"></a-curvedimage>
+        <a-curvedimage id="right-blue" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#0000ff; opacity:0.3" geometry="theta-length:36; theta-start:270"></a-curvedimage>
+
+        <a-curvedimage id="middleRight-red" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#ff0000; opacity:0.3" geometry="theta-length:36; theta-start:306"></a-curvedimage>
+
+        <a-curvedimage id="center-black" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#000000; opacity:0.3" geometry="theta-length:36; theta-start:342"></a-curvedimage>
+
+        <a-curvedimage id="middleLeft-green" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#008000; opacity:0.3" geometry="theta-length:36; theta-start:378"></a-curvedimage>
+
+        <a-curvedimage id="left-yellow" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#ffff00; opacity:0.3" geometry="theta-length:36; theta-start:414"></a-curvedimage> -->
+
+        <!-- テキストの配置 -->
+        <a-text font="kelsonsans" value="s_hall_Gmap" width="6" position="-2.5 3 -2.5" rotation="0 40 0"></a-text>
+
+        <!--レイアウト例あり-->
+        <a-text font="kelsonsans" value="shall_Gmap_ex" width="6" position="-2.5 2 -2.5" rotation="0 40 0"
+            navigate-on-click="url: ../shall_Gmap_ex"></a-text>
 </body>
 
 </html>
