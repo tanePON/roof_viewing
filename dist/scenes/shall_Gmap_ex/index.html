@@ -30,43 +30,59 @@
 <body>
     <a-scene>
         <a-assets>
-            <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-            <!-- Images. -->
-            <img id="houyouryoku" src="../../../src/assets/yurusu_houyouryoku.png">
-            <img id="mappin" src="../../../src/assets/map_pin.png">
-            <img id="exitpin" src="../../../src/assets/hijyouguchi_mark.png">
-            <img id="checkpin" src="../../../src/assets/magnifier_mushimegane_check.png">
-            <img id="arrowBlue" src="../../../src/assets/arrow_blue.png">
+            <img id="left-img" src="https://dummyimage.com/600x400/ffff00/ffffff.jpg&text=600x400left">
+            <img id="middleLeft-img" src="https://dummyimage.com/600x400/008000/ffffff.jpg&text=600x400middleLeft">
+            <img id="center-img" src="https://dummyimage.com/600x400/000000/ffffff.jpg&text=600x400center">
+            <img id="middleRight-img" src="https://dummyimage.com/600x400/ff0000/ffffff.jpg&text=600x400middleRight">
+            <img id="right-img" src="https://dummyimage.com/600x400/0000ff/ffffff.jpg&text=600x400center">
         </a-assets>
 
         <!-- rigでカメラのrotation look-controls cursorでmouseでreyを飛ばしてるらしい -->
         <a-entity id="rig" rotation="0 0 0">
-            <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+            <a-entity id="camera" camera="userHeight: 1.6; fov:80" look-controls cursor="rayOrigin: mouse"></a-entity>
         </a-entity>
 
         <!-- 背景 -->
-        <a-sky src="../../../src/assets/shall_2109.jpg" rotation="0 230 0"></a-sky>
+        <a-sky src="../../../src/assets/shall_ex_2123.jpg" rotation="0 230 0"></a-sky>
+        
 
-        <!-- info -->
-        <a-entity id="info" position="0 1 -2.5">
-            <a-text font="kelsonsans" value="s_hall_Gmap_ex"></a-text>
-            <a-text class="ex_link" navigate-on-click="url: ../shall_Gmap" materifont="kelsonsans" value="s_hall_Gmap"
-                position="0 0.3 0"></a-text>
-        </a-entity>
+        <!-- Gmap風UI -->
+        <!-- <a-curvedimage id="right-blue" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#0000ff; opacity:0.3" geometry="theta-length:36; theta-start:90"></a-curvedimage> -->
 
-        <!--場所移動できるlink-->
-        <a-entity class="link_milldeLeft" navigate-on-click="url: ../shall_4" geometry="primitive: plane; height:3; width:3"
-            material="shader: standard; src: #arrowBlue; transparent: true" position="-5 -5 -5"
-            rotation="270 315 0"></a-entity>
-        <a-entity class="link_center" navigate-on-click="url: ../shall_5" geometry="primitive: plane; height:3; width:3"
-            material="shader: standard; src: #arrowBlue; transparent: true" position="0 -5 -10"
-            rotation="270 270 0"></a-entity>
-        <a-entity class="link_middleRight" navigate-on-click="url: ../shall_v2_2" geometry="primitive: plane; height:3; width:3"
-            material="shader: standard; src: #arrowBlue; transparent: true" position="5 -5 -5"
-            rotation="270 225 0"></a-entity>
-            
-        <!--その他-->
+        <a-curvedimage id="middleRight-red" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#ff0000; opacity:0.3" geometry="theta-length:36; theta-start:126"></a-curvedimage>
 
+        <a-curvedimage id="center-black" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#000000; opacity:0.3" geometry="theta-length:36; theta-start:162"></a-curvedimage>
+
+        <a-curvedimage id="middleLeft-green" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#008000; opacity:0.3" geometry="theta-length:36; theta-start:198"></a-curvedimage>
+
+        <!-- <a-curvedimage id="left-yellow" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#ffff00; opacity:0.3" geometry="theta-length:36; theta-start:234"></a-curvedimage>
+
+        <a-curvedimage id="right-blue" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#0000ff; opacity:0.3" geometry="theta-length:36; theta-start:270"></a-curvedimage>
+
+        <a-curvedimage id="middleRight-red" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#ff0000; opacity:0.3" geometry="theta-length:36; theta-start:306"></a-curvedimage>
+
+        <a-curvedimage id="center-black" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#000000; opacity:0.3" geometry="theta-length:36; theta-start:342"></a-curvedimage>
+
+        <a-curvedimage id="middleLeft-green" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#008000; opacity:0.3" geometry="theta-length:36; theta-start:378"></a-curvedimage>
+
+        <a-curvedimage id="left-yellow" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#ffff00; opacity:0.3" geometry="theta-length:36; theta-start:414"></a-curvedimage> -->
+
+        <!-- テキストの配置 -->
+        <a-text font="kelsonsans" value="s_hall_Gmap" width="6" position="-2.5 3 -2.5" rotation="0 40 0"></a-text>
+
+        <!--レイアウト例あり-->
+        <a-text font="kelsonsans" value="shall_Gmap_ex" width="6" position="-2.5 2 -2.5" rotation="0 40 0"
+            navigate-on-click="url: ../shall_Gmap_ex"></a-text>
 </body>
 
 </html>
