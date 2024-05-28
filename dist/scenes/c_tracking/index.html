@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="left-img" src="https://dummyimage.com/600x400/ffff00/ffffff.jpg&text=600x400left">
+            <img id="middleLeft-img" src="https://dummyimage.com/600x400/008000/ffffff.jpg&text=600x400middleLeft">
+            <img id="center-img" src="https://dummyimage.com/600x400/000000/ffffff.jpg&text=600x400center">
+            <img id="middleRight-img" src="https://dummyimage.com/600x400/ff0000/ffffff.jpg&text=600x400middleRight">
+            <img id="right-img" src="https://dummyimage.com/600x400/0000ff/ffffff.jpg&text=600x400center">
+        </a-assets>
+
+        <!-- rigでカメラのrotation look-controls cursorでmouseでreyを飛ばしてるらしい -->
+        <a-entity id="rig" rotation="0 0 0">
+            <a-entity id="camera" camera="userHeight: 1.6; fov:80" look-controls cursor="rayOrigin: mouse"></a-entity>
+        </a-entity>
+
+        <!-- canvasUI -->
+        <a-entity camera look-controls>
+            <a-entity id=home-btn geometry="primitive: plane; height: 0.2; width: 0.2" position="0.5 -0.5 -1"
+                material="color: gray; opacity: 0.5"></a-entity>
+            <a-entity id=location-ui geometry="primitive: plane; height: 0.2; width: 0.2" position="0 -0.5 -1"
+                material="color: gray; opacity: 0.5"></a-entity>
+            <a-entity id=ex-btn geometry="primitive: plane; height: 0.2; width: 0.2" position="0.5 -0.5 -1"
+                material="color: gray; opacity: 0.5"></a-entity>
+
+            <a-entity><a-text font="kelsonsans" value="ばしょ場ba" width="6"></a-text></a-entity>
+        </a-entity>
+
+        <!-- Gmap風UI -->
+        <a-curvedimage id="right-blue" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#0000ff; opacity:0.3" geometry="theta-length:36; theta-start:90"></a-curvedimage>
+        <a-curvedimage id="middleRight-red" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#ff0000; opacity:0.3" geometry="theta-length:36; theta-start:126"></a-curvedimage>
+        <a-curvedimage id="center-black" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#000000; opacity:0.3" geometry="theta-length:36; theta-start:162"></a-curvedimage>
+        <a-curvedimage id="middleLeft-green" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#008000; opacity:0.3" geometry="theta-length:36; theta-start:198"></a-curvedimage>
+        <a-curvedimage id="left-yellow" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#ffff00; opacity:0.3" geometry="theta-length:36; theta-start:234"></a-curvedimage>
+        <a-curvedimage id="right-blue" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#0000ff; opacity:0.3" geometry="theta-length:36; theta-start:270"></a-curvedimage>
+        <a-curvedimage id="middleRight-red" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#ff0000; opacity:0.3" geometry="theta-length:36; theta-start:306"></a-curvedimage>
+        <a-curvedimage id="center-black" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#000000; opacity:0.3" geometry="theta-length:36; theta-start:342"></a-curvedimage>
+        <a-curvedimage id="middleLeft-green" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#008000; opacity:0.3" geometry="theta-length:36; theta-start:378"></a-curvedimage>
+        <a-curvedimage id="left-yellow" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
+            material="color:#ffff00; opacity:0.3" geometry="theta-length:36; theta-start:414"></a-curvedimage>
+    </a-scene>
+</body>
+
+</html>
