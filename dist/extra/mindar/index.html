@@ -1,16 +1,42 @@
 <html>
-  <head>
+
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
-  </head>
-  <body>
-    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane color="blue" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
-      </a-entity>
+</head>
+
+<body>
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false"
+        device-orientation-permission-ui="enabled: false">
+
+        <!-- aseets -->
+        <a-assets><img id="laughingman_img" src="../../../src/assets/laughingman.png"></a-assets>
+
+        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+        <a-entity mindar-image-target="targetIndex: 0">
+            <!-- デモのまま -->
+            <!-- <a-plane color="blue" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane> -->
+
+            <!-- テキストを表示 -->
+            <a-entity id="text" geometry="primitive: plane; height: 0.1; width: 1.4" position="0 -1 0"
+                material="color: gray; opacity: 0.5">
+                <a-text font="kelsonsans" value="100% IWATE Prefecture" width="2" position="-0.5 0 0"></a-text>
+            </a-entity>
+
+            <!-- laughingmanを表示 -->
+            <a-entity id="laughingman" geometry="primitive:plane; height:2; width:2" material="shader: standard; src:#laughingman_img; transparent:true" position="0 0 0"></a-entity>
+
     </a-scene>
-  </body>
+</body>
+
+
+
+</a-entity>
+</a-scene>
+</body>
+</a-scene>
+</body>
+
 </html>
