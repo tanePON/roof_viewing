@@ -10,10 +10,6 @@
     <!-- aseets -->
     <a-assets>
         <a-assets><img id="laughingman_img" src="../../../src/assets/laughingman.png"></a-assets>
-        <a-asset-item id="glassesModel"
-            src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/examples/face-tracking/assets/glasses/scene.gltf"></a-asset-item>
-        <a-asset-item id="headModel"
-            src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/examples/face-tracking/assets/sparkar/headOccluder.glb"></a-asset-item>
     </a-assets>
 
     <a-scene mindar-face embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
@@ -23,11 +19,8 @@
             <!-- <a-sphere color="green" radius="0.1"></a-sphere> -->
             <!-- laughingmanを表示 -->
             <a-entity id="laughingman" geometry="primitive:plane; height:2; width:2"
-                material="shader: standard; src:#laughingman_img; transparent:true" position="0 0 0.1"></a-entity>
-        </a-entity>
-        <a-entity mindar-face-target="anchorIndex: 168">
-            <a-gltf-model mindar-face-occluder position="0 -0.3 0.15" rotation="0 0 0" scale="0.065 0.065 0.065"
-                src="#headModel"></a-gltf-model>
+                material="shader: standard; src:#laughingman_img; transparent:true" position="0 0 0.05"></a-entity>
+            </a-entity>
         </a-entity>
     </a-scene>
 </body>
