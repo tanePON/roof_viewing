@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    <a-scene>
+    <a-scene button>
         <a-assets>
             <img id="left-img" src="https://dummyimage.com/600x400/ffff00/ffffff.jpg&text=600x400left">
             <img id="middleLeft-img" src="https://dummyimage.com/600x400/008000/ffffff.jpg&text=600x400middleLeft">
@@ -45,7 +45,7 @@
         <!-- 背景 -->
         <a-sky src="../../../src/assets/shall_2109.jpg" rotation="0 230 0"></a-sky>
         <!-- <a-sky id="dummySky" material="color:#c0c0c0"></a-sky> -->
-        
+
 
         <!-- Gmap風UI -->
         <!-- <a-curvedimage id="right-blue" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
@@ -84,6 +84,8 @@
         <!--レイアウト例あり-->
         <a-text font="kelsonsans" value="shall_Gmap_ex" width="6" position="-2.5 2 -2.5" rotation="0 40 0"
             navigate-on-click="url: ../shall_Gmap_ex"></a-text>
+    </a-scene>
+    <script src="button.js"></script>
 </body>
 
 </html>
