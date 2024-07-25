@@ -10,11 +10,27 @@
 <body>
   <a-scene background="color: gray" cursor="rayOrigin: mouse; fuse: false" raycaster="objects: raycastable"
     info-message="htmlSrc: #messageText">
-<a-assets><a-asset-item id="messageText" src="message.html"></a-asset-item></a-assets>
+    <a-assets>
+      <!-- INFOの中身 -->
+      <a-asset-item id="messageText" src="message.html"></a-asset-item>
+      <img id="detail" src="../../../src/assets/detail.png">
+    </a-assets>
+
+    <!-- detailBtn -->
+    <a-entity id="infoBtn" geometry="primitive: plane; height:1; width:1"
+      material="shader: standard; src: #detail; transparent: true" position="0 1.5 -2" scale="0.5 0.5 0.5"></a-entity>
+
+    <!-- infoPanel 初期値はvisible="false" -->
+     <a-entity id="infoPanel"
+     position="0 1.5 -1"
+     info-panel
+     geometry="primitive: plane; width:0.5; height:0.5"
+     material="color: green; opacity: 0.3">
+    </a-entity>
 
 
-    <a-box position="0 3 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-    <a-text id="JPtext" rotation="0 0 0" position="0 1.5 -1" value="we are ざじゃぱにーずゴプリン"
+    <!-- 日本語をa-textで描画 -->
+    <a-text id="JPtext" rotation="0 0 0" position="0 2 -1" scale="0.5 0.5 0.5" value="we are ざじゃぱにーずゴプリン"
       font="../../../src/assets/noto-sans-cjk-jp-msdf.json" font-image="../../../src/assets/noto-sans-cjk-jp-msdf.png"
       negate="false" color="red" align="center">
     </a-text>
