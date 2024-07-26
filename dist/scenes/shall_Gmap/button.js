@@ -15,11 +15,12 @@ AFRAME.registerComponent('button', {
         buttonContainerEl.classList.add('a-button-container');
         buttonContainerEl.appendChild(buttonEl);
         this.el.sceneEl.appendChild(buttonContainerEl);
-        buttonEl.innerHTML = 'ponpon';
+        buttonEl.innerHTML = '小ホールEx';
 
         buttonEl.addEventListener('click', this.onClick.bind(this));
     },
     onClick: function () {
-        console.log("クリックイベントここ");
+        console.log("小ホールExを表示");
+        window.location.href = "../shall_ex";
     }
 });

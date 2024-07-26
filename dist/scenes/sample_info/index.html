@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <a-scene background="color: gray" cursor="rayOrigin: mouse; fuse: false" raycaster="objects: raycastable"
+  <a-scene background="color: yellow" cursor="rayOrigin: mouse; fuse: false" raycaster="objects: raycastable"
     info-message="htmlSrc: #messageText">
     <a-assets>
       <!-- INFOの中身 -->
@@ -16,16 +16,24 @@
       <img id="detail" src="../../../src/assets/detail.png">
     </a-assets>
 
+    <!-- background -->
+     <a-entity id="background"></a-entity>
+
+    <!-- camera -->
+    <a-entity position="0 1.6 0" camera
+      look-controls="magicWindowTrackingEnabled: false; touchEnabled: true">
+      <a-entity id="fadeBackground" geometry="primitive: sphere; radius: 2.5"
+        material="color: black; side: back; shader: flat; transparent: true; opacity: 0.6" visible="false">
+      </a-entity>
+    </a-entity>
+
     <!-- detailBtn -->
     <a-entity id="infoBtn" geometry="primitive: plane; height:1; width:1"
       material="shader: standard; src: #detail; transparent: true" position="0 1.5 -2" scale="0.5 0.5 0.5"></a-entity>
 
     <!-- infoPanel 初期値はvisible="false" -->
-     <a-entity id="infoPanel"
-     position="0 1.5 -1"
-     info-panel
-     geometry="primitive: plane; width:0.5; height:0.5"
-     material="color: green; opacity: 0.3">
+    <a-entity id="infoPanel" position="0 1.5 -1" info-panel geometry="primitive: plane; width:0.5; height:0.5"
+      material="color: green; opacity: 0.3">
     </a-entity>
 
 

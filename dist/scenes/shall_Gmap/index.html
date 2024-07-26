@@ -51,14 +51,17 @@
         <!-- <a-curvedimage id="right-blue" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
             material="color:#0000ff; opacity:0.3" geometry="theta-length:36; theta-start:90"></a-curvedimage> -->
 
-        <a-curvedimage id="middleRight-red" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
-            material="color:#ff0000; opacity:0.3" geometry="theta-length:36; theta-start:126"></a-curvedimage>
+        <a-curvedimage id="middleRight-red" navigate-on-click="url: ../shall_2" radius="0.5" height="29"
+            position="0 0 0" scale="1 1 1" material="color:#ff0000; opacity:0.3; visible: false"
+            geometry="theta-length:36; theta-start:126"></a-curvedimage>
 
-        <a-curvedimage id="center-black" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
-            material="color:#000000; opacity:0.3" geometry="theta-length:36; theta-start:162"></a-curvedimage>
+        <a-curvedimage id="center-black" navigate-on-click="url: ../shall_5" radius="0.5" height="29" position="0 0 0"
+            scale="1 1 1" material="color:#000000; opacity:0.3; visible: false"
+            geometry="theta-length:36; theta-start:162"></a-curvedimage>
 
-        <a-curvedimage id="middleLeft-green" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
-            material="color:#008000; opacity:0.3" geometry="theta-length:36; theta-start:198"></a-curvedimage>
+        <a-curvedimage id="middleLeft-green" navigate-on-click="url: ../shall_4" radius="0.5" height="29"
+            position="0 0 0" scale="1 1 1" material="color:#008000; opacity:0.3; visible: false"
+            geometry="theta-length:36; theta-start:198"></a-curvedimage>
 
         <!-- <a-curvedimage id="left-yellow" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
             material="color:#ffff00; opacity:0.3" geometry="theta-length:36; theta-start:234"></a-curvedimage>
@@ -79,11 +82,8 @@
             material="color:#ffff00; opacity:0.3" geometry="theta-length:36; theta-start:414"></a-curvedimage> -->
 
         <!-- テキストの配置 -->
-        <a-text font="kelsonsans" value="s_hall_Gmap" width="6" position="-2.5 3 -2.5" rotation="0 40 0"></a-text>
+        <a-text font="../../../src/assets/noto-sans-cjk-jp-msdf.json" font-image="../../../src/assets/noto-sans-cjk-jp-msdf.png" value="小ホール_1" width="6" position="0 1 -2.5" rotation="0 0 0" color="black" align="center"></a-text>
 
-        <!--レイアウト例あり-->
-        <a-text font="kelsonsans" value="shall_Gmap_ex" width="6" position="-2.5 2 -2.5" rotation="0 40 0"
-            navigate-on-click="url: ../shall_Gmap_ex"></a-text>
     </a-scene>
     <script src="button.js"></script>
 </body>
