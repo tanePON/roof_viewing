@@ -15,12 +15,12 @@ AFRAME.registerComponent('button', {
         buttonContainerEl.classList.add('a-button-container');
         buttonContainerEl.appendChild(buttonEl);
         this.el.sceneEl.appendChild(buttonContainerEl);
-        buttonEl.innerHTML = '小ホールEx';
+        buttonEl.innerHTML = '小ホール';
 
         buttonEl.addEventListener('click', this.onClick.bind(this));
     },
     onClick: function () {
-        console.log("小ホールExを表示");
-        window.location.href = "../shall_gmap_ex";
+        console.log("小ホールを表示");
+        window.location.href = "../shall_gmap";
     }
 });

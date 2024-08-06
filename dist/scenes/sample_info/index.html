@@ -29,13 +29,12 @@
 
     <!-- detailBtn -->
     <a-entity id="infoBtn" geometry="primitive: plane; height:1; width:1"
-      material="shader: standard; src: #detail; transparent: true" position="0 1.5 -2" scale="0.5 0.5 0.5"></a-entity>
+      material="shader: standard; src: #detail; transparent: true" position="0 1.5 -2" scale="0.5 0.5 0.5" class="raycastable menu-button"></a-entity>
 
     <!-- infoPanel 初期値はvisible="false" -->
     <a-entity id="infoPanel" position="0 1.5 -1" info-panel geometry="primitive: plane; width:0.5; height:0.5"
       material="color: green; opacity: 0.3">
     </a-entity>
-
 
     <!-- 日本語をa-textで描画 -->
     <a-text id="JPtext" rotation="0 0 0" position="0 2 -1" scale="0.5 0.5 0.5" value="we are ざじゃぱにーずゴプリン"
