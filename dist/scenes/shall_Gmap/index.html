@@ -5,7 +5,7 @@
     <title>360&deg; 小ホール_Gmap</title>
     <meta name="description" content="360&deg; Image Gallery - A-Frame">
 
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <!--
       イベントの設定方法:https://stackoverflow.com/questions/49018866/need-help-creating-links-to-other-web-pages-in-aframe    -->
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
@@ -30,11 +30,7 @@
 <body>
     <a-scene button>
         <a-assets>
-            <img id="left-img" src="https://dummyimage.com/600x400/ffff00/ffffff.jpg&text=600x400left">
-            <img id="middleLeft-img" src="https://dummyimage.com/600x400/008000/ffffff.jpg&text=600x400middleLeft">
-            <img id="center-img" src="https://dummyimage.com/600x400/000000/ffffff.jpg&text=600x400center">
-            <img id="middleRight-img" src="https://dummyimage.com/600x400/ff0000/ffffff.jpg&text=600x400middleRight">
-            <img id="right-img" src="https://dummyimage.com/600x400/0000ff/ffffff.jpg&text=600x400center">
+
         </a-assets>
 
         <!-- rigでカメラのrotation look-controls cursorでmouseでreyを飛ばしてるらしい -->
@@ -44,8 +40,11 @@
 
         <!-- 背景 -->
         <a-sky src="../../../src/assets/shall_2109.jpg" rotation="0 230 0"></a-sky>
-        <!-- <a-sky id="dummySky" material="color:#c0c0c0"></a-sky> -->
 
+        <!-- テキストの配置 -->
+        <a-text font="../../../src/assets/noto-sans-cjk-jp-msdf.json"
+            font-image="../../../src/assets/noto-sans-cjk-jp-msdf.png" value="小ホール_1" width="6" position="0 1 -2.5"
+            rotation="0 0 0" color="black" align="center"></a-text>
 
         <!-- Gmap風UI -->
         <!-- <a-curvedimage id="right-blue" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
@@ -80,9 +79,6 @@
 
         <a-curvedimage id="left-yellow" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
             material="color:#ffff00; opacity:0.3" geometry="theta-length:36; theta-start:414"></a-curvedimage> -->
-
-        <!-- テキストの配置 -->
-        <a-text font="../../../src/assets/noto-sans-cjk-jp-msdf.json" font-image="../../../src/assets/noto-sans-cjk-jp-msdf.png" value="小ホール_1" width="6" position="0 1 -2.5" rotation="0 0 0" color="black" align="center"></a-text>
 
     </a-scene>
     <script src="button.js"></script>

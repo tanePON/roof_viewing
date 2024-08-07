@@ -17,19 +17,19 @@
     </a-assets>
 
     <!-- background -->
-     <a-entity id="background"></a-entity>
+    <a-entity id="background"></a-entity>
 
     <!-- camera -->
-    <a-entity position="0 1.6 0" camera
-      look-controls="magicWindowTrackingEnabled: false; touchEnabled: true">
+    <a-entity position="0 1.6 0" camera look-controls="magicWindowTrackingEnabled: false; touchEnabled: true">
       <a-entity id="fadeBackground" geometry="primitive: sphere; radius: 2.5"
         material="color: black; side: back; shader: flat; transparent: true; opacity: 0.6" visible="false">
       </a-entity>
     </a-entity>
 
     <!-- detailBtn -->
-    <a-entity id="infoBtn" geometry="primitive: plane; height:1; width:1"
-      material="shader: standard; src: #detail; transparent: true" position="0 1.5 -2" scale="0.5 0.5 0.5" class="raycastable menu-button"></a-entity>
+    <a-entity id="detailBtn" geometry="primitive: plane; height:1; width:1"
+      material="shader: standard; src: #detail; transparent: true" position="0 1.5 -2" scale="0.5 0.5 0.5"
+      class="raycastable menu-button"></a-entity>
 
     <!-- infoPanel 初期値はvisible="false" -->
     <a-entity id="infoPanel" position="0 1.5 -1" info-panel geometry="primitive: plane; width:0.5; height:0.5"

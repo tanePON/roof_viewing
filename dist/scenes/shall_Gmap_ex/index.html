@@ -5,7 +5,7 @@
     <title>360&deg; 小ホール_Gmap_ex</title>
     <meta name="description" content="360&deg; Image Gallery - A-Frame">
 
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <!--
       イベントの設定方法:https://stackoverflow.com/questions/49018866/need-help-creating-links-to-other-web-pages-in-aframe    -->
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
@@ -30,11 +30,7 @@
 <body>
     <a-scene button>
         <a-assets>
-            <img id="left-img" src="https://dummyimage.com/600x400/ffff00/ffffff.jpg&text=600x400left">
-            <img id="middleLeft-img" src="https://dummyimage.com/600x400/008000/ffffff.jpg&text=600x400middleLeft">
-            <img id="center-img" src="https://dummyimage.com/600x400/000000/ffffff.jpg&text=600x400center">
-            <img id="middleRight-img" src="https://dummyimage.com/600x400/ff0000/ffffff.jpg&text=600x400middleRight">
-            <img id="right-img" src="https://dummyimage.com/600x400/0000ff/ffffff.jpg&text=600x400center">
+            <img id="detail" src="../../../src/assets/detail.png">
         </a-assets>
 
         <!-- rigでカメラのrotation look-controls cursorでmouseでreyを飛ばしてるらしい -->
@@ -45,19 +41,30 @@
         <!-- 背景 -->
         <a-sky src="../../../src/assets/shall_ex_2123.jpg" rotation="0 230 0"></a-sky>
 
+        <!-- テキストの配置 -->
+        <a-text id=text font="../../../src/assets/noto-sans-cjk-jp-msdf.json"
+            font-image="../../../src/assets/noto-sans-cjk-jp-msdf.png" value="小ホール_1_ex" width="6" position="0 1 -2.5"
+            rotation="0 0 0" color="black" align="center"></a-text>
+        <!-- detailBtn -->
+        <a-entity id="detailBtn" geometry="primitive: plane; height:1; width:1"
+            material="shader: standard; src: #detail; transparent: true" position="1.4 0.1 -5" scale="0.5 0.5 0.5"
+            class="raycastable menu-button"></a-entity>
 
         <!-- Gmap風UI -->
         <!-- <a-curvedimage id="right-blue" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
             material="color:#0000ff; opacity:0.3" geometry="theta-length:36; theta-start:90"></a-curvedimage> -->
 
-        <a-curvedimage id="middleRight-red" navigate-on-click="url: ../shall_ex_2" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
-            material="color:#ff0000; opacity:0; visible: false" geometry="theta-length:36; theta-start:126"></a-curvedimage>
+        <a-curvedimage id="middleRight-red" navigate-on-click="url: ../shall_ex_2" radius="0.5" height="29"
+            position="0 0 0" scale="1 1 1" material="color:#ff0000; opacity:0; visible: false"
+            geometry="theta-length:36; theta-start:126"></a-curvedimage>
 
-        <a-curvedimage id="center-black" navigate-on-click="url: ../shall_ex_5" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
-            material="color:#000000; opacity:0; visible: false" geometry="theta-length:36; theta-start:162"></a-curvedimage>
+        <a-curvedimage id="center-black" navigate-on-click="url: ../shall_ex_5" radius="0.5" height="29"
+            position="0 0 0" scale="1 1 1" material="color:#000000; opacity:0.3; visible: false"
+            geometry="theta-length:36; theta-start:162"></a-curvedimage>
 
-        <a-curvedimage id="middleLeft-green" navigate-on-click="url: ../shall_ex_4" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
-            material="color:#008000; opacity:0; visible: false" geometry="theta-length:36; theta-start:198"></a-curvedimage>
+        <a-curvedimage id="middleLeft-green" navigate-on-click="url: ../shall_ex_4" radius="0.5" height="29"
+            position="0 0 0" scale="1 1 1" material="color:#008000; opacity:0; visible: false"
+            geometry="theta-length:36; theta-start:198"></a-curvedimage>
 
         <!-- <a-curvedimage id="left-yellow" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
             material="color:#ffff00; opacity:0.3" geometry="theta-length:36; theta-start:234"></a-curvedimage>
@@ -77,10 +84,6 @@
         <a-curvedimage id="left-yellow" radius="0.5" height="29" position="0 0 0" scale="1 1 1"
             material="color:#ffff00; opacity:0.3" geometry="theta-length:36; theta-start:414"></a-curvedimage> -->
 
-        <!-- テキストの配置 -->
-        <a-text id=text font="../../../src/assets/noto-sans-cjk-jp-msdf.json"
-            font-image="../../../src/assets/noto-sans-cjk-jp-msdf.png" value="小ホール_1_ex" width="6" position="0 1 -2.5"
-            rotation="0 0 0" color="black" align="center"></a-text>
     </a-scene>
     <script src="button.js"></script>
 </body>
