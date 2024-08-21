@@ -21,6 +21,6 @@ AFRAME.registerComponent('button', {
     },
     onClick: function () {
         console.log("小ホールExを表示");
-        window.location.href = "../shall_gmap_ex";
+        window.location.href = "../shall_Gmap_ex";
     }
 });
